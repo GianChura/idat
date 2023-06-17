@@ -1,0 +1,42 @@
+# Listar todos los usuarios
+GET http://localhost:8080/mascotas/all
+
+###
+
+# Crear un usuario
+
+POST http://localhost:8080/mascotas/add
+Content-Type: application/x-www-form-urlencoded
+
+nombre=Lucas
+&raza=poodle
+&propietario=Juan
+
+###
+# Editar usuario
+
+PUT http://localhost:8080/mascotas/edit
+Content-Type: application/x-www-form-urlencoded
+
+id=1
+&nombre=Lucas
+&raza=poodle
+&propietario=Luis
+
+###
+
+# Ver usuario por ID
+GET http://localhost:8080/mascotas/ver/1
+
+###
+
+# Borrar usuario por ID
+DELETE http://localhost:8080/mascotas/del
+Content-Type: application/x-www-form-urlencoded
+
+id=6
+
+###
+
+# Ver resultado de una query SQL
+GET http://localhost:8080/mascotas/get/report
